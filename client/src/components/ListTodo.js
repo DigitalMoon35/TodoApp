@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
+import TodoItem from "./TodoItem";
 
 
 
@@ -15,6 +16,7 @@ const ListTodo = () => {
                 `http://localhost:5050/todos/${id}`,
                 {method: "DELETE"}
             );
+            console.log(todo);
             setTodos(todos.filter(todo => todo.todo_id !== id));
         } catch (error) {
             console.error(error.message);
@@ -42,11 +44,7 @@ const ListTodo = () => {
             <div className="todo-container">
                 <ul>
                     {todos.map((todo, idx) => (
-                        <div className="todo">
-                        <li key={idx}>{todo.description}</li> 
-                    <button className="edit-button">Edit</button>
-                    <button onClick={() => deleteTodo(todo.todo_id)} className="delete-button">Delete</button>
-                        </div>
+                        <TodoItem todo={todo} deleteTodo={deleteTodo}/>
                     ))}
                 </ul>
             </div>
