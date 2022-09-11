@@ -11,9 +11,13 @@ function EditModal({ open, todo, onClose }) {
             <div className="overlay">
                 <div className="modal-container">
                     <h1>Make your edit!</h1>
-                    <input type="text" value={description} onChange={(e) => setDescription(e.target.value)}/>
-                    <button>Save</button>
-                    <button onClick={onClose}>Cancel</button>
+                    <div className="todo-box">
+                        <input type="text" value={description} onChange={(e) => setDescription(e.target.value)}/>
+                        <button className="save-button">Save</button>
+                        <button 
+                        onClick={onClose}
+                        className="cancel-button">Cancel</button>
+                    </div>
                 </div>
             </div>
         </Fragment>
