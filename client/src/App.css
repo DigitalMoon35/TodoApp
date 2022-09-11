@@ -4,13 +4,14 @@
 
 body {
   margin: 0;
-  background-color: rgb(51, 119, 82);
+  background-color: rgb(198, 202, 155);
 }
 
 .container {
+  /* border: 1px solid red; */
   margin-top: 2rem;
-  max-width: 900px;
-  margin: auto;
+  width: 900px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,4 +31,48 @@ body {
 .add-button {
   font-size: 1.5rem;
   padding: .5rem;
+}
+
+
+ul {
+  list-style: none;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: grid;
+}
+
+.todo {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  padding: 1rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.edit-button {
+  color: #ffffff;
+  background-color: rgb(83, 173, 40);
+  padding: 1rem;
+  margin-left: .5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.delete-button {
+  color: #ffffff;
+  background-color: firebrick;
+  padding: 1rem;
+  margin-left: .5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.todo-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  /* border: 1px solid black; */
 }

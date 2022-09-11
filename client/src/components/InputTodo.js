@@ -15,14 +15,15 @@ const InputTodo = () => {
                 headers: {"Content-type" : "application/json"},
                 body: JSON.stringify(body)
             })
-            console.log(response)
+            window.location.href = "/";
+            console.log(response);
         } catch (error) {
             console.error(error.message)        
         }
     }
     return (
         <Fragment>
-            <h1 className="todo-list">Pern Todo List</h1>
+            <h1 className="todo-list">Todo List</h1>
             <div className="form-box">
             <form onSubmit={onSubmitForm}>
                 <input 
